@@ -1,25 +1,23 @@
 const { Model } = require('objection');
 
-class BolsaModel extends Model {
+class UsoPuntosModel extends Model {
 
   static get idColumn() {
-    return 'id_bolsa';
+    return 'id_uso';
   }
   static get tableName() {
-    return 'bolsa';
+    return 'uso_puntos';
   }
-
   static get relationMappings() {
     // Importing models here is a one way to avoid require loops.
-    const Puntos = require('./Puntos');
-    const Clientes = require('./Cliente');
+    const PuntosDetalle = require('./UsoDetalle');
     return {
-      puntos: {
+      detalles: {
         relation: Model.HasManyRelation,
-        modelClass: Puntos,
+        modelClass: PuntosDetalle,
         join: {
-          from: 'bolsa.id_bolsa',
-          to: 'puntos.id_bolsa'
+          from: 'uso_puntos.id_uso',
+          to: 'uso_detalle.id_uso'
         }
       },
       
@@ -27,4 +25,4 @@ class BolsaModel extends Model {
   }
 }
 
-module.exports = BolsaModel;
+module.exports = UsoPuntosModel;

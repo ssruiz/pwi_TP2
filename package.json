@@ -14,10 +14,10 @@
     "express": "^4.16.4",
     "knex": "^0.16.5",
     "moment": "^2.24.0",
+    "node-cron": "^2.0.3",
+    "nodemailer": "^6.1.1",
     "objection": "^1.6.8",
     "pg": "^7.10.0",
-    "pg-hstore": "^2.3.2",
-    "sequelize": "^5.7.5",
-    "stringify": "^5.2.0"
+    "pg-hstore": "^2.3.2"
   }
 }

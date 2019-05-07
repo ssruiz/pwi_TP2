@@ -5,4 +5,5 @@ npm install pg --save
 npm i cors --save
 npm i nodemon --save-dev
 npm install moment
-npm install stringify
+npm install cron
+npm install nodemailer
